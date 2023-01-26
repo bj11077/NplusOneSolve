@@ -22,7 +22,7 @@ class UserRepositoryTest {
 
 
     /**
-     * findAll
+     * findAll + @EntityGraph
      * FK를 안쓰는경우
      * N+1 문제없이 쿼리가 한번실행
      */
@@ -36,9 +36,9 @@ class UserRepositoryTest {
 
 
     /**
-     * findAll
+     * findAll + @EntityGraph
      * FK를 쓰는경우
-     * N+1 문제발생
+     * N+1 문제발생안함 => @EntityGraph을 통해 미리 가져옴
      */
     @Test
     @Transactional
